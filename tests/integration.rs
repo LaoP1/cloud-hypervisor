@@ -4731,7 +4731,7 @@ mod tests {
                 .args(&["--cmdline", DIRECT_KERNEL_BOOT_CMDLINE])
                 .default_disks()
                 .default_net()
-                .args(&["--balloon", "size=0"])
+                .args(&["--balloon", "size=0,deflate_on_oom=true"])
                 .args(&["--api-socket", &api_socket])
                 .capture_output()
                 .spawn()
